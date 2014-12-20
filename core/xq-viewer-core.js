@@ -351,7 +351,7 @@ function showalert(sMag, sUrl, sLine, sFunc) {
         sMag = sp[0];
         MessFunc = sp[1];
     }
-    sMag = (!sUrl) ? sMag : ('Error:' + sMag + ' Line Number:' + sLine + '<br><nobr>URL:' + sUrl + '</nobr><br>Press Ctrl+F5 to refesh: <nobr><a target="_blank" href="tencent://message/?uin=88081492&Site=DhtmlXQ.' + location.hostname + '&Menu=yes"><img border="0" SRC="http://wpa.qq.com/pa?p=1:88081492:16" alt="Click here to send the message" /></a> <a target="_blank" href="http://amos.im.alisoft.com/msg.aw?v=2&uid=hldcg&site=cntaobao&s=1&charset=utf-8" ><img border="0" src="http://amos.im.alisoft.com/online.aw?v=2&uid=hldcg&site=cntaobao&s=1&charset=utf-8" alt="Click here to send the message" /></a></nobr>');
+    sMag = (!sUrl) ? sMag : ('Error:' + sMag + ' Line Number:' + sLine + '<br><nobr>URL:' + sUrl + '</nobr><br>Press Ctrl+F5 to refesh');
     $('messdiv').innerHTML = sMag;
     $('messdiv').style.width = wm * 0.8 - 3;
     $('message').style.zIndex = 3;
@@ -738,7 +738,7 @@ function initboard() {
     s += cDIV(2, thh + 1, w3 - 3, ch - 2, 0, 'overflow:' + (NS.IE && NS.IE < 5.5 ? 'hidden' : 'auto') + ';' + CPIMG, 'id="c_scroll"', 'head');
     s += ('<textarea id="c_text" style="height:' + (ch - 2) + 'px;overflow-y:scroll!important;overflow-y:' + (NS.IE && NS.IE < 5.5 ? 'scroll' : 'visible') + ';border:0;width:100%;padding-left:2px;background-color:transparent;" onblur="allowLR=true;" onfocus="allowLR=false;" ondblclick="this.select();"></textarea>');
     s += ('</div>');
-    s += cDIV(6, thh + ch + 1, w3 - 7, '', 0, typ, '', '<span id="livevartxt">\u53D8\u7740(\u5355\u51FB\u9009\u62E9)</span>\u3000<a href="javascript:UpMove()" title="Move Up">Up</a><a href="javascript:DownMove()" title="Move Down">Dn</a><a href="javascript:DelMove()" title="Delete">Del</a>');
+    //s += cDIV(6, thh + ch + 1, w3 - 7, '', 0, typ, '', '<span id="livevartxt">\u53D8\u7740(\u5355\u51FB\u9009\u62E9)</span>\u3000<a href="javascript:UpMove()" title="Move Up">Up</a><a href="javascript:DownMove()" title="Move Down">Dn</a><a href="javascript:DelMove()" title="Delete">Del</a>');
     s += cDIV(6, thh + ch + 1, w3 - 7 - 3 * fzt, '', 0, typ, 'id="livetimediv"', '');
     s += cDIV(1, thh + ch + thh, w3 - 2, 4 * lh + 2, 0, brColor, '', '');
     s += cDIV(2, thh + ch + thh + 1, w3 - 3, 4 * lh, 0, 'overflow:auto;' + CPIMG, 'id="v_scroll"', 'head');
@@ -944,7 +944,7 @@ function initdata() {
         sText1.value = '';
         LiveMain();
     } else {
-        $('livevartxt').innerHTML = '\u53D8\u7740(\u5355\u51FB\u9009\u62E9)'; //变着(单击选择)
+        //$('livevartxt').innerHTML = '\u53D8\u7740(\u5355\u51FB\u9009\u62E9)'; //变着(单击选择)
         $('livetimediv').innerHTML = '';
         div16.innerHTML = getrefer();
         if (aHeight >= w0 || isSP || window == top) {
